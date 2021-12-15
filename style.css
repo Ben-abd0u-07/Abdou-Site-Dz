@@ -1,7 +1,9 @@
+/*--------------------------------- main css --------------------------------*/
 * {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 body {
   background: linear-gradient(45deg, #080122 50%, #353232);
@@ -10,21 +12,29 @@ body {
   padding: 10px;
 }
 .logo a {
-  font-size: 30px;
+  font-size: 36px;
   font-family: "Dancing Script", cursive;
   color: white;
   text-decoration: none;
 }
+header {
+  margin: 0 auto;
+}
 .head {
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
   padding: 0 20px;
   margin: 0 5px;
+}
+ul {
+  display: flex;
 }
 ul li {
   display: inline-block;
   list-style: none;
-  font-size: 20px;
+  font-size: 25px;
   padding: 15px;
 }
 ul li a {
@@ -36,22 +46,28 @@ ul li a {
 ul li a:hover {
   color: rgb(200, 200, 200);
 }
-section {
+section,
+.container {
   text-align: center;
-  padding: 270px 20px;
+  padding: 250px 20px;
+  margin: 0 auto;
 }
 section p {
   color: white;
   font-family: "Source Serif Pro", serif;
-  font-size: 40px;
+  font-size: 55px;
   margin-bottom: 20px;
 }
 button {
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: rgb(253, 238, 103);
   transition: background 0.5s;
   padding: 10px;
+  box-shadow: 2px 2px 19px 1px;
+}
+button:hover {
+  background-color: white;
 }
 button a {
   text-decoration: none;
@@ -60,15 +76,13 @@ button a {
   font-weight: bold;
   font-family: "Source Serif Pro", serif;
 }
-button:hover {
-  background-color: white;
-}
-div {
+article {
   padding: 200px 20px;
   text-align: center;
+  margin: 0 auto;
 }
-div p {
-  font-size: 30px;
+article p {
+  font-size: 36px;
   color: white;
   font-family: "Source Serif Pro", serif;
   margin-bottom: 30px;
@@ -90,124 +104,80 @@ h1 {
   margin-bottom: 20px;
 }
 img {
-  height: 50px;
-  width: 50px;
-  padding: 10px;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
 }
-section a:hover {
+img:hover {
   opacity: 70%;
 }
-@media only screen and (min-width: 768px) {
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+::-webkit-scrollbar {
+  display: none;
+}
+/*---------------------------for large devices ---------------------*/
+@media (min-width: 1200px) {
+  header,
+  article {
+    width: 1170px;
   }
-  body {
-    background: linear-gradient(45deg, #080122 50%, #353232);
+}
+/* -----------------------for medium devices ----------------------*/
+@media (min-width: 992px) and (max-width: 1200px) {
+  header,
+  article {
+    width: 992px;
   }
-  .logo {
-    padding: 10px;
+}
+/* ------------------------for small devices---------------------- */
+@media (min-width: 768px) and (max-width: 992px) {
+  header,
+  article {
+    width: 750px;
   }
+}
+/* ---------------------------for mobiles---------------------- */
+@media (max-width: 768px) {
   .logo a {
-    font-size: 36px;
-    font-family: "Dancing Script", cursive;
-    color: white;
-    text-decoration: none;
-  }
-  .head {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin: 0 100px;
+    font-size: 30px;
   }
   ul li {
-    display: inline-block;
-    list-style: none;
-    font-size: 25px;
-    padding: 15px;
-  }
-  ul li a {
-    padding: 10px;
-    text-decoration: none;
-    font-family: "Nunito", sans-serif;
-    color: white;
-  }
-  ul li a:hover {
-    color: rgb(200, 200, 200);
-  }
-  section {
-    display: inline-block;
-    text-align: center;
-    padding: 230px 20px;
-    height: 100%;
-    width: 100%;
+    font-size: 23px;
   }
   section p {
-    font-family: "Source Serif Pro", serif;
-    color: white;
-    font-size: 55px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  button {
-    display: inline-flex;
-    padding: 10px;
-    background-color: rgb(253, 238, 103);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.5s;
-  }
-  button a {
-    font-family: "Source Serif Pro", serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #1c1c1a;
-  }
-  button:hover {
-    background-color: white;
-  }
-  div {
-    height: 100%;
-    padding: 300px 50px;
-    padding-bottom: 250px;
-    text-align: center;
-  }
-  div p {
-    text-align: center;
-    font-size: 36px;
-    font-family: "Source Serif Pro", serif;
-    color: white;
-    margin: 0 100px;
-    margin-bottom: 20px;
-  }
-  footer {
-    font-size: 13px;
-    display: block;
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    background-position: 0% 0%;
-    position: fixed;
-    bottom: 0pt;
-    color: white;
-  }
-  h1 {
-    font-size: 50px;
-    font-family: "Source Serif Pro", serif;
-    color: white;
-    margin-bottom: 30px;
+    font-size: 40px;
   }
   img {
-    margin: 20px;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
   }
-  section a:hover {
-    opacity: 70%;
+}
+/*--------------------  for small mobiles--------------------- */
+@media (max-width: 350px) {
+  .logo a {
+    font-size: 25px;
+  }
+  ul li {
+    font-size: 20px;
+  }
+  section p {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  img {
+    height: 80px;
+    width: 80px;
+  }
+  .container {
+    text-align: center;
+    padding: 140px 20px;
+  }
+  section {
+    text-align: center;
+    padding: 200px 20px;
+  }
+  div p {
+    font-size: 25px;
   }
 }
