@@ -74,6 +74,8 @@ div p {
   margin-bottom: 30px;
 }
 footer {
+  font-size: 13px;
+  display: block;
   font-family: "Roboto", sans-serif;
   text-align: center;
   background-position: 0% 0%;
@@ -108,7 +110,7 @@ section a:hover {
     padding: 10px;
   }
   .logo a {
-    font-size: 30px;
+    font-size: 36px;
     font-family: "Dancing Script", cursive;
     color: white;
     text-decoration: none;
@@ -122,7 +124,7 @@ section a:hover {
   ul li {
     display: inline-block;
     list-style: none;
-    font-size: 20px;
+    font-size: 25px;
     padding: 15px;
   }
   ul li a {
@@ -137,14 +139,14 @@ section a:hover {
   section {
     display: inline-block;
     text-align: center;
-    padding: 200px 20px;
+    padding: 230px 20px;
     height: 100%;
     width: 100%;
   }
   section p {
     font-family: "Source Serif Pro", serif;
     color: white;
-    font-size: 50px;
+    font-size: 55px;
     padding: 10px;
     margin-bottom: 20px;
   }
@@ -178,13 +180,15 @@ section a:hover {
   }
   div p {
     text-align: center;
-    font-size: 30px;
+    font-size: 36px;
     font-family: "Source Serif Pro", serif;
     color: white;
     margin: 0 100px;
     margin-bottom: 20px;
   }
   footer {
+    font-size: 13px;
+    display: block;
     font-family: "Roboto", sans-serif;
     text-align: center;
     background-position: 0% 0%;
