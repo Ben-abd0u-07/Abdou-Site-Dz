@@ -4,7 +4,7 @@
   font-family: sans-serif;
 }
 body {
-  background-color: #1c1c1a;
+  background: linear-gradient(45deg, #080122 50%, #353232);
 }
 .logo {
   padding: 10px;
@@ -96,8 +96,13 @@ section a:hover {
   opacity: 70%;
 }
 @media only screen and (min-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
   body {
-    background-color: #1c1c1a;
+    background: linear-gradient(45deg, #080122 50%, #353232);
   }
   .logo {
     padding: 10px;
