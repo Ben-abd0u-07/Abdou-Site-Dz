@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  background-color: #1c1c1a;
+}
+.logo {
+  padding: 10px;
+}
+.logo a {
+  font-size: 30px;
+  font-family: "Dancing Script", cursive;
+  color: white;
+  text-decoration: none;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 0 5px;
+}
+ul li {
+  display: inline-block;
+  list-style: none;
+  font-size: 20px;
+  padding: 15px;
+}
+ul li a {
+  padding: 10px;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  color: white;
+}
+ul li a:hover {
+  color: rgb(200, 200, 200);
+}
+section {
+  text-align: center;
+  padding: 270px 20px;
+}
+section p {
+  color: white;
+  font-family: "Source Serif Pro", serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+button {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(253, 238, 103);
+  transition: background 0.5s;
+  padding: 10px;
+}
+button a {
+  text-decoration: none;
+  color: #1c1c1a;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Source Serif Pro", serif;
+}
+button:hover {
+  background-color: white;
+}
+div {
+  padding: 200px 20px;
+  text-align: center;
+}
+div p {
+  font-size: 30px;
+  color: white;
+  font-family: "Source Serif Pro", serif;
+  margin-bottom: 30px;
+}
+footer {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-position: 0% 0%;
+  position: fixed;
+  bottom: 0pt;
+  color: white;
+}
+h1 {
+  color: white;
+  font-family: "Source Serif Pro", serif;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+img {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+}
+section a:hover {
+  opacity: 70%;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #1c1c1a;
+  }
+  .logo {
+    padding: 10px;
+  }
+  .logo a {
+    font-size: 30px;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    text-decoration: none;
+  }
+  .head {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0 100px;
+  }
+  ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: 20px;
+    padding: 15px;
+  }
+  ul li a {
+    padding: 10px;
+    text-decoration: none;
+    font-family: "Nunito", sans-serif;
+    color: white;
+  }
+  ul li a:hover {
+    color: rgb(200, 200, 200);
+  }
+  section {
+    display: inline-block;
+    text-align: center;
+    padding: 200px 20px;
+    height: 100%;
+    width: 100%;
+  }
+  section p {
+    font-family: "Source Serif Pro", serif;
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  button {
+    display: inline-flex;
+    padding: 10px;
+    background-color: rgb(253, 238, 103);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.5s;
+  }
+  button a {
+    font-family: "Source Serif Pro", serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1c1c1a;
+  }
+  button:hover {
+    background-color: white;
+  }
+  div {
+    height: 100%;
+    padding: 300px 50px;
+    padding-bottom: 250px;
+    text-align: center;
+  }
+  div p {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Source Serif Pro", serif;
+    color: white;
+    margin: 0 100px;
+    margin-bottom: 20px;
+  }
+  footer {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    color: white;
+  }
+  h1 {
+    font-size: 50px;
+    font-family: "Source Serif Pro", serif;
+    color: white;
+    margin-bottom: 30px;
+  }
+  img {
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+  }
+  section a:hover {
+    opacity: 70%;
+  }
+}
