@@ -51,6 +51,7 @@ ul li a:hover {
   color: rgb(200, 200, 200);
 }
 section {
+  border-radius: 20px;
   width: 1170px;
   height: 500px;
   display: flex;
@@ -60,6 +61,10 @@ section {
   margin: 0 auto;
   box-shadow: 0 0 20px 0px rgb(0, 0, 0);
   margin-top: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 .squid {
   flex: 50%;
@@ -271,21 +276,22 @@ article p img {
   }
 }
 /* ---------------------------for mobiles---------------------- */
-@media (max-width: 768px) and (min-width: 360px) {
+@media (max-width: 767px) and (min-width: 360px) {
   .squid {
     display: none;
   }
   section {
+    margin-top: 120px;
     width: 90%;
     display: block;
-    height: 420px;
-    padding-top: 150px;
+    height: 300px;
+    padding-top: 80px;
   }
   .secript {
     flex: 100%;
   }
   .secript p {
-    font-size: 40px;
+    font-size: 38px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -319,7 +325,10 @@ article p img {
     left: 19px;
   }
   .foot button a {
-    font-size: 15px;
+    font-size: 14px;
+  }
+  .foot .copyright {
+    font-size: 13px;
   }
   .secript button {
     width: fit-content;
@@ -349,16 +358,17 @@ article p img {
     display: none;
   }
   section {
+    margin-top: 120px;
     width: 90%;
     display: block;
-    height: 420px;
-    padding-top: 120px;
+    height: 300px;
+    padding-top: 80px;
   }
   .secript {
     flex: 100%;
   }
   .secript p {
-    font-size: 38px;
+    font-size: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -396,7 +406,7 @@ article p img {
     left: 22px;
   }
   .foot button a {
-    font-size: 13px;
+    font-size: 12px;
   }
   .foot .copyright {
     font-size: 11px;
