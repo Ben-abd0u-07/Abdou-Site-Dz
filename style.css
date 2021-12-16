@@ -5,8 +5,12 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: linear-gradient(45deg, #080122 50%, #353232);
+  height: 100%;
 }
 .logo {
   padding: 10px;
@@ -46,19 +50,35 @@ ul li a {
 ul li a:hover {
   color: rgb(200, 200, 200);
 }
-section,
-.container {
+section {
+  width: 1170px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
-  padding: 250px 0px;
+  padding-top: 200px;
   margin: 0 auto;
-  width: 100%;
-  height: 100%;
+  box-shadow: 0 0 20px 0px rgb(0, 0, 0);
+  margin-top: 20px;
 }
-section p {
+.squid {
+  flex: 50%;
+}
+.squid img {
+  flex: 50%;
+  width: 300px;
+  height: 300px;
+  margin-top: -80px;
+}
+.secript {
+  flex: 50%;
+  text-align: left;
+}
+.secript p {
+  margin-left: 99px;
   color: white;
   font-family: "Source Serif Pro", serif;
   font-size: 55px;
-  margin-bottom: 20px;
 }
 button {
   border: none;
@@ -66,6 +86,7 @@ button {
   background-color: rgb(253, 238, 103);
   transition: background 0.5s;
   padding: 10px;
+  margin-left: 40px;
   box-shadow: 2px 2px 19px 1px;
 }
 button:hover {
@@ -78,26 +99,68 @@ button a {
   font-weight: bold;
   font-family: "Source Serif Pro", serif;
 }
-article {
-  padding: 200px 20px;
+.container {
   text-align: center;
+  padding: 250px 0;
   margin: 0 auto;
 }
+article {
+  padding: 400px 30px 130px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
 article p {
+  position: relative;
   font-size: 36px;
   color: white;
   font-family: "Source Serif Pro", serif;
+  /* font-weight: bold; */
   margin-bottom: 30px;
+  background: linear-gradient(-45deg, #080122 30%, #353232);
+  text-align: left;
+  padding: 30px;
+  box-shadow: 0 0 20px 0 black;
+  line-height: 45px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+}
+span {
+  color: transparent;
 }
 footer {
-  font-size: 13px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  padding: 10px;
+}
+.foot {
+  display: flex;
+  flex: wrap row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.foot2 {
+  display: flex;
+  flex: wrap row;
+  justify-content: center;
+  margin: 0 auto;
+}
+.foot button a {
+  font-size: 18px;
+}
+.copyright {
+  font-size: 16px;
   display: block;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  background-position: 0% 0%;
-  position: fixed;
-  bottom: 0pt;
   color: white;
+  padding: 10px;
+  margin: auto 0;
 }
 h1 {
   color: white;
@@ -106,48 +169,130 @@ h1 {
   margin-top: -40px;
   margin-bottom: 20px;
 }
-img {
+a img {
   margin: 30px;
   height: 100px;
   width: 100px;
   transition: opacity 0.2s;
 }
-img:hover {
+a img:hover {
   opacity: 70%;
 }
 .container a {
   text-decoration: none;
 }
 
+article p img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 21px;
+  left: 31px;
+}
+/*--------------------------- remove scrollbar---------------------- */
 ::-webkit-scrollbar {
   display: none;
 }
 /*---------------------------for large devices ---------------------*/
 @media (min-width: 1200px) {
   header,
-  article {
+  article,
+  section,
+  .foot {
     width: 1170px;
   }
 }
 /* -----------------------for medium devices ----------------------*/
 @media (min-width: 992px) and (max-width: 1200px) {
   header,
-  article {
+  article,
+  .foot {
     width: 992px;
+  }
+  section {
+    width: 950px;
+    height: 450px;
+  }
+  .secript p {
+    font-size: 45px;
+  }
+  .squid img {
+    width: 250px;
+    height: 250px;
+  }
+  article p {
+    font-size: 30px;
+  }
+  article p img {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 26px;
+    left: 25px;
   }
 }
 /* ------------------------for small devices---------------------- */
 @media (min-width: 768px) and (max-width: 992px) {
   header,
-  article {
+  article,
+  section,
+  foot {
     width: 750px;
   }
   article p {
     font-size: 25px;
   }
+  section {
+    width: 750px;
+    height: 400px;
+    padding-top: 150px;
+  }
+  .secript p {
+    font-size: 40px;
+    margin-left: 40px;
+  }
+  .squid img {
+    width: 240px;
+    height: 240px;
+  }
+  .secript button {
+    margin-top: 20px;
+  }
+  article p {
+    font-size: 25px;
+    line-height: 32px;
+  }
+  article p img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 18px;
+    left: 25px;
+  }
 }
 /* ---------------------------for mobiles---------------------- */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 360px) {
+  .squid {
+    display: none;
+  }
+  section {
+    width: 90%;
+    display: block;
+    height: 420px;
+    padding-top: 150px;
+  }
+  .secript {
+    flex: 100%;
+  }
+  .secript p {
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    flex-wrap: wrap;
+  }
   .logo a {
     font-size: 30px;
   }
@@ -157,30 +302,42 @@ img:hover {
   section p {
     font-size: 40px;
   }
-  img {
+  a img {
     height: 80px;
     width: 80px;
     margin: 20px;
   }
   article p {
-    font-size: 30px;
+    font-size: 23px;
+    line-height: 35px;
+  }
+  article p img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 23px;
+    left: 19px;
+  }
+  .foot button a {
+    font-size: 15px;
+  }
+  .secript button {
+    width: fit-content;
+    margin: 10px auto 0;
   }
 }
 /*--------------------  for small mobiles--------------------- */
-@media (max-width: 350px) {
+@media (max-width: 360px) {
   .logo a {
     font-size: 25px;
   }
   ul li {
     font-size: 20px;
   }
-  section p {
-    font-size: 30px;
-  }
   h1 {
     font-size: 35px;
   }
-  img {
+  a img {
     height: 70px;
     width: 70px;
     margin: 20px;
@@ -188,11 +345,60 @@ img:hover {
   .container {
     padding: 140px 20px;
   }
+  .squid {
+    display: none;
+  }
   section {
+    width: 90%;
+    display: block;
+    height: 420px;
+    padding-top: 120px;
+  }
+  .secript {
+    flex: 100%;
+  }
+  .secript p {
+    font-size: 38px;
     text-align: center;
-    padding: 200px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+  }
+  .secript button {
+    width: fit-content;
+    margin: 10px auto 0;
+  }
+  .logo a {
+    font-size: 30px;
+  }
+  ul li {
+    font-size: 23px;
+  }
+  section p {
+    font-size: 40px;
+  }
+  a img {
+    height: 80px;
+    width: 80px;
+    margin: 20px;
   }
   article p {
-    font-size: 25px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  article p img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 18px;
+    left: 22px;
+  }
+  .foot button a {
+    font-size: 13px;
+  }
+  .foot .copyright {
+    font-size: 11px;
   }
 }
