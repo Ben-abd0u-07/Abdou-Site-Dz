@@ -130,17 +130,45 @@ button a {
   margin: 0 auto;
 }
 article {
-  padding: 400px 30px 130px;
+  margin-top: 400px;
+}
+.space {
+  height: 50px;
+}
+.about {
+  text-align: center;
+}
+.about_title {
+  position: relative;
+  font-size: 50px;
+  color: white;
+  font-family: "Source Serif Pro", serif;
+}
+.about_title::after {
+  position: absolute;
+  content: "";
+  background-color: rgb(253, 238, 103);
+  bottom: -10px;
+  left: 13%;
+  width: 75%;
+  height: 8px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.about_txt {
+  padding: 80px 30px 135px;
   text-align: center;
   margin: 0 auto;
   position: relative;
 }
-article p {
+.about_txt p {
   position: relative;
   font-size: 36px;
   color: white;
   font-family: "Source Serif Pro", serif;
-  /* font-weight: bold; */
   margin-bottom: 30px;
   background: linear-gradient(-45deg, #080122 30%, #353232);
   text-align: left;
@@ -152,6 +180,13 @@ article p {
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
   border-radius: 30px;
+}
+.about_txt p img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 21px;
+  left: 31px;
 }
 span {
   color: transparent;
@@ -187,7 +222,7 @@ footer {
   padding: 10px;
   margin: auto 0;
 }
-h1 {
+.contact {
   color: white;
   font-family: "Source Serif Pro", serif;
   font-size: 50px;
@@ -216,13 +251,6 @@ h1 {
   text-decoration: none;
 }
 
-article p img {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 21px;
-  left: 31px;
-}
 /*--------------------------- remove scrollbar---------------------- */
 ::-webkit-scrollbar {
   display: none;
@@ -230,7 +258,7 @@ article p img {
 /*---------------------------for large devices ---------------------*/
 @media (min-width: 1200px) {
   header,
-  article,
+  .about_txt,
   section,
   .foot {
     width: 1170px;
@@ -239,7 +267,7 @@ article p img {
 /* -----------------------for medium devices ----------------------*/
 @media (min-width: 992px) and (max-width: 1200px) {
   header,
-  article,
+  .about_txt,
   .foot {
     width: 992px;
   }
@@ -254,10 +282,10 @@ article p img {
     width: 250px;
     height: 250px;
   }
-  article p {
+  .about_txt p {
     font-size: 30px;
   }
-  article p img {
+  .about_txt p img {
     width: 45px;
     height: 45px;
     position: absolute;
@@ -268,13 +296,16 @@ article p img {
 /* ------------------------for small devices---------------------- */
 @media (min-width: 768px) and (max-width: 992px) {
   header,
-  article,
+  .about_txt,
   section,
-  foot {
+  .foot {
     width: 750px;
   }
-  article p {
+  .about_txt p {
     font-size: 25px;
+  }
+  .about_txt {
+    padding: 80px 30px 150px;
   }
   section {
     width: 750px;
@@ -292,11 +323,11 @@ article p img {
   .secript button {
     margin-top: 20px;
   }
-  article p {
+  .about_txt p {
     font-size: 25px;
     line-height: 32px;
   }
-  article p img {
+  .about_txt p img {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -340,21 +371,35 @@ article p img {
     font-size: 40px;
     margin-bottom: 25px;
   }
+  .container {
+    padding: 180px 0 225px 0;
+  }
   .container a img {
     height: 80px;
     width: 80px;
     margin: 20px;
   }
-  article p {
+  .about_title {
+    font-size: 45px;
+  }
+  .about_title::after {
+    left: 17%;
+    width: 65%;
+    height: 8px;
+  }
+  .about_txt p {
     font-size: 23px;
     line-height: 35px;
   }
-  article p img {
+  .about_txt p img {
     width: 40px;
     height: 40px;
     position: absolute;
     top: 23px;
     left: 19px;
+  }
+  .about_txt {
+    padding: 80px 30px 44px;
   }
   .foot button a {
     font-size: 14px;
@@ -375,7 +420,7 @@ article p img {
   ul li {
     font-size: 20px;
   }
-  h1 {
+  .contact {
     font-size: 35px;
   }
   .container a img {
@@ -384,7 +429,7 @@ article p img {
     margin: 20px;
   }
   .container {
-    padding: 140px 20px;
+    padding: 80px 20px 40px;
   }
   .squid img {
     margin-bottom: px;
@@ -396,9 +441,9 @@ article p img {
   section {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 80px;
+    margin-top: 40px;
     width: 90%;
-    height: 400px;
+    height: 380px;
     padding-top: 80px;
   }
   .secript p {
@@ -431,11 +476,22 @@ article p img {
     width: 80px;
     margin: 20px;
   }
-  article p {
+  .about_title {
+    font-size: 40px;
+  }
+  .about_title::after {
+    left: 17%;
+    width: 65%;
+    height: 8px;
+  }
+  .about_txt {
+    padding: 80px 30px 40px;
+  }
+  .about_txt p {
     font-size: 20px;
     line-height: 25px;
   }
-  article p img {
+  .about_txt p img {
     width: 35px;
     height: 35px;
     position: absolute;
