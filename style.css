@@ -13,9 +13,8 @@ body {
   height: 100%;
 }
 .logo a img {
-  width: 50px;
-  height: 42px;
-  margin-top: 13px;
+  width: 65px;
+  margin-top: 18px;
   margin-left: 0px;
 }
 
@@ -35,19 +34,26 @@ ul {
   padding-top: 5px;
 }
 ul li {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   list-style: none;
   font-size: 25px;
   padding: 15px;
 }
 ul li a {
+  text-decoration: none;
+}
+ul li a img {
+  display: none;
+}
+ul li a span {
   position: relative;
   padding: 10px;
-  text-decoration: none;
+
   font-family: "Nunito", sans-serif;
   color: white;
 }
-ul li a::after {
+ul li a span::after {
   position: absolute;
   bottom: 5px;
   left: 50%;
@@ -66,7 +72,7 @@ ul li a::after {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
-ul li a:hover::after {
+ul li a span:hover::after {
   width: 80%;
   left: 10px;
 }
@@ -337,6 +343,32 @@ footer {
 }
 /* ---------------------------for mobiles---------------------- */
 @media (max-width: 768px) and (min-width: 360px) {
+  nav ul {
+    padding: 0;
+  }
+  ul {
+    margin-top: 10px;
+    height: 60px;
+  }
+  ul li {
+    background-color: rgba(255, 255, 255, 4%);
+    margin-top: 0px;
+    margin-left: 10px;
+    border-radius: 37px;
+    -webkit-border-radius: 37px;
+    -moz-border-radius: 37px;
+    -ms-border-radius: 37px;
+    -o-border-radius: 37px;
+    box-shadow: 0 0px 8px 0 #262626;
+  }
+  nav ul li span {
+    display: none;
+  }
+  nav ul li img {
+    display: inline-block;
+    margin-top: -8px;
+    width: 45px;
+  }
   .squid img {
     margin-bottom: px;
     width: 180px;
@@ -378,6 +410,22 @@ footer {
     height: 80px;
     width: 80px;
     margin: 20px;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+  }
+  .container a img:hover {
+    opacity: 100%;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+  ul li a span::after {
+    display: none;
   }
   .about_title {
     font-size: 45px;
@@ -414,11 +462,42 @@ footer {
 }
 /*--------------------  for small mobiles--------------------- */
 @media (max-width: 360px) {
-  .logo a {
-    font-size: 25px;
+  .logo a img {
+    width: 60px;
+    height: 50px;
+  }
+  nav ul {
+    padding: 0;
+  }
+  ul {
+    margin-top: 10px;
+    height: 50px;
   }
   ul li {
-    font-size: 20px;
+    height: 60px;
+    width: 75px;
+    background-color: rgba(255, 255, 255, 4%);
+    margin-top: 0px;
+    margin-left: 10px;
+    border-radius: 37px;
+    -webkit-border-radius: 37px;
+    -moz-border-radius: 37px;
+    -ms-border-radius: 37px;
+    -o-border-radius: 37px;
+    box-shadow: 0 0px 8px 0 #262626;
+  }
+  nav ul li a {
+    margin-top: 10px;
+  }
+  nav ul li span {
+    display: none;
+  }
+  nav ul li img {
+    display: inline-block;
+    margin-top: -17px;
+    margin-left: 20px;
+    width: 45px;
+    height: 45px;
   }
   .contact {
     font-size: 35px;
@@ -432,7 +511,6 @@ footer {
     padding: 80px 20px 40px;
   }
   .squid img {
-    margin-bottom: px;
     width: 160px;
     height: 160px;
     margin-top: -45px;
@@ -503,5 +581,26 @@ footer {
   }
   .foot .copyright {
     font-size: 11px;
+  }
+  .container a img {
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+  }
+  .container a img:hover {
+    opacity: 100%;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+  ul li a span::after {
+    display: none;
   }
 }
