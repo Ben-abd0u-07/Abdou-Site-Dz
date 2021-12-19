@@ -1,4 +1,10 @@
 /*--------------------------------- main css --------------------------------*/
+::selection {
+  background: transparent;
+}
+::-moz-selection {
+  background: transparent;
+}
 * {
   margin: 0;
   padding: 0;
