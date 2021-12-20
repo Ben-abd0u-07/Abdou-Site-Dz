@@ -357,6 +357,8 @@ footer {
     height: 60px;
   }
   ul li {
+    display: flex;
+    align-items: center;
     background-color: rgba(255, 255, 255, 4%);
     margin-top: 0px;
     margin-left: 10px;
@@ -371,8 +373,7 @@ footer {
     display: none;
   }
   nav ul li img {
-    display: inline-block;
-    margin-top: -8px;
+    display: block;
     width: 45px;
   }
   .squid img {
@@ -480,10 +481,12 @@ footer {
     height: 50px;
   }
   ul li {
+    display: flex;
+    align-items: center;
     height: 60px;
     width: 75px;
     background-color: rgba(255, 255, 255, 4%);
-    margin-top: 0px;
+    /* margin-top: 0px; */
     margin-left: 10px;
     border-radius: 37px;
     -webkit-border-radius: 37px;
@@ -499,11 +502,10 @@ footer {
     display: none;
   }
   nav ul li img {
-    display: inline-block;
-    margin-top: -17px;
-    margin-left: 20px;
+    display: block;
     width: 45px;
     height: 45px;
+    margin-top: 10%;
   }
   .contact {
     font-size: 35px;
