@@ -245,19 +245,19 @@ footer {
   margin: 25px;
   height: 100px;
   width: 100px;
-  transition: opacity, transform 0.2s;
-  -webkit-transition: opacity, transform 0.2s;
-  -moz-transition: opacity, transform 0.2s;
-  -ms-transition: opacity, transform 0.2s;
-  -o-transition: opacity, transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
+  -webkit-transition: opacity 0.2s, transform 0.2s;
+  -moz-transition: opacity 0.2s, transform 0.2s;
+  -ms-transition: opacity 0.2s, transform 0.2s;
+  -o-transition: opacity 0.2s, transform 0.2s;
 }
 .container a img:hover {
   opacity: 90%;
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
+  transform: scale(1.14);
+  -webkit-transform: scale(1.14);
+  -moz-transform: scale(1.14);
+  -ms-transform: scale(1.14);
+  -o-transform: scale(1.14);
 }
 .container a {
   text-decoration: none;
